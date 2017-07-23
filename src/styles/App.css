@@ -1,33 +1,21 @@
 .App {
   text-align: center;
+  width: 1200px;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.App .jumbotron-fluid{
+  background-color: #5190a5;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.App {
+  background-color: #c3e09d;
 }
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
 .App-Body {
   display: flex;
 }
 .App-Body .PlayListFormDiv{
   width: 50%;
+}
+.App-Body .PlayListFormDiv .listForm {
+  margin-right: 2em;
 }
 .App-Body .PlayListDiv{
   width: 50%;

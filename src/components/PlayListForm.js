@@ -64,26 +64,32 @@ export default class PlayListForm extends Component {
                 placeholder="Name or User Name"
                 value={this.state.userName} />
           </div>
-        <input  onChange={this.handleSongTitle}
+
+          <div className="form-group">
+            <input  onChange={this.handleSongTitle}
                 type="text"
                 className="form-control"
                 id="user"
                 placeholder="Song Title"
                 value={this.state.songTitle}/>
+          </div>
 
-        <input  onChange={this.handleSongArtist}
-                type="text"
-                className="form-control"
-                id="user"
-                placeholder="Artist"
-                value={this.state.songArtist}/>
-
-        <input  onChange={this.handleSongNotes}
-                type="text"
-                className="form-control"
-                id="user"
-                placeholder="Notes about the Song"
-                value={this.state.songNotes}/>
+          <div className="form-group">
+            <input  onChange={this.handleSongArtist}
+                    type="text"
+                    className="form-control"
+                    id="user"
+                    placeholder="Artist"
+                    value={this.state.songArtist}/>
+          </div>
+          <div className="form-group">
+            <input  onChange={this.handleSongNotes}
+                    type="text"
+                    className="form-control"
+                    id="user"
+                    placeholder="Notes about the Song"
+                    value={this.state.songNotes}/>
+          </div>
           <button className="btn btn-primary" type='submit' onClick={this.addToList}>Submit</button>
         </form>
       </div>
