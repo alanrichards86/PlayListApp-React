@@ -21,17 +21,17 @@ export default class PlayLists extends Component{
         })
     }
     renderSongs = () =>{
-        return this.state.songs.map(e => (
-          <div className="song">{e.name}</div>
+        return this.state.songs.map(song => (
+          <PlayListItems key={song._id} song={song} />
         )
       );
     }
-  
+
   render(){
 
     return(
-      <div>
-        {this.renderSongs}
+      <div className='PlayListDiv'>
+        <div className="songs">{this.renderSongs()}</div>
         {console.log(this.state.songs)}
         <button onClick={this.fetchData}>Get Playlists</button>
       </div>

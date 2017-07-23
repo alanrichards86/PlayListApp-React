@@ -22,3 +22,13 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.App-Body {
+  display: flex;
+}
+.App-Body .PlayListFormDiv{
+  width: 50%;
+}
+.App-Body .PlayListDiv{
+  width: 50%;
+}
