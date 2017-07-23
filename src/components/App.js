@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from '../logo.svg';
 // import NavBar from './NavBar.js';
 import PlayLists from './PlayList';
-// import PlayListForm from './PlayListForm';
+import PlayListForm from './PlayListForm';
 import '../styles/App.css';
 
 
@@ -13,13 +13,10 @@ class App extends Component {
     this.state = {
       value:''
     }
-    this.handleChange = this.handleChange.bind(this);
+
   }
 
-  handleChange(event) {
-    console.log(event.target);
-    this.setState({value: event.target.value});
-  }
+
 
   render() {
     return (
@@ -31,10 +28,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <div>
-          <input type='text' name='value' onChange={this.handleChange}></input>
-        </div>
-        <PlayLists />
+        <PlayListForm />
       </div>
     );
   }

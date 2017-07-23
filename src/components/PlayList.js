@@ -10,25 +10,28 @@ export default class PlayLists extends Component{
       songs:[]
     }
   }
-  fetchData = (e) => {
-      e.preventDefault();
-      fetch('https://tiny-lasagna-server.herokuapp.com/collections/playlisting').then(results => {
-        return results.json();
-      }).then(data => {
-        this.setState({songs: data});
-      })
-  }
-  renderSongs = () =>{
-      return this.state.songs.map(e => (
-        <div className="song">{e.id}</div>
-      )
-    );
-  }
+
+
+    fetchData = (e) => {
+        e.preventDefault();
+        fetch('https://tiny-lasagna-server.herokuapp.com/collections/playlisting').then(results => {
+          return results.json();
+        }).then(data => {
+          this.setState({songs: data});
+        })
+    }
+    renderSongs = () =>{
+        return this.state.songs.map(e => (
+          <div className="song">{e.name}</div>
+        )
+      );
+    }
+  
   render(){
 
     return(
       <div>
-        {this.renderSongs()}
+        {this.renderSongs}
         {console.log(this.state.songs)}
         <button onClick={this.fetchData}>Get Playlists</button>
       </div>
@@ -44,3 +47,11 @@ export default class PlayLists extends Component{
         })
   };
 }
+
+
+// renderSongs = () =>{
+//     return this.state.songs.map(e => (
+//       <div className="song">{e.id}</div>
+//     )
+//   );
+// }
