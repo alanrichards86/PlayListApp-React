@@ -33,7 +33,7 @@ export default class PlayLists extends Component{
       <div className='PlayListDiv'>
         <div className="songs">{this.renderSongs()}</div>
         {console.log(this.state.songs)}
-        <button onClick={this.fetchData}>Update Playlists</button>
+        <button className="btn btn-primary" onClick={this.fetchData}>Update Playlists</button>
       </div>
     )
   }
