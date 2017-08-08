@@ -17,6 +17,7 @@ export default class PlayLists extends Component{
         fetch('https://tiny-lasagna-server.herokuapp.com/collections/playlisting').then(results => {
           return results.json();
         }).then(data => {
+          console.log('Its working', data);
           this.setState({songs: data});
         })
     }
